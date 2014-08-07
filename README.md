@@ -52,13 +52,14 @@ npm install --save read-image-size-promise
 var readImageSizePromise = require('read-image-size-promise');
 ```
 
-### readImageSizePromise(imageFilePath)
+### readImageSizePromise(*imageFilePath*)
 
-Return: [`Promise`](http://promises-aplus.github.io/promises-spec/)
+*imageFilePath*: `String`  
+Return: `Object` ([Promise](http://promises-aplus.github.io/promises-spec/))
 
-It will be [*fulfilled*](http://promises-aplus.github.io/promises-spec/#point-26) with an object in the form `{width: [Number], height: [Number]}` when it detects the width and height of the image file.
+When it detects the width and height of the image file, it will be [*fulfilled*](http://promisesaplus.com/#point-26) with an object in the form `{width: [Number], height: [Number]}` as an argument.
 
-It will be [*rejected*](http://promises-aplus.github.io/promises-spec/#point-30) with an error when it fails to read the file, or the file is not supported.
+When it fails to read the file, or the file is not supported, it will be [*rejected*](http://promisesaplus.com/#point-30) with an error as an argument.
 
 ```javascript
 var imageSize = readImageSizePromise();
