@@ -37,13 +37,13 @@
     "jpeg",
     "png",
     "psd",
+    "svg",
     "tiff",
     "webp"
   ],
   "dependencies": {
-    "es6-promise": "^1.0.0",
-    "global": "^4.2.1",
-    "image-size-stream": "^0.1.0"
+    "image-size-stream": "^1.0.0",
+    "wrap-promise": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "^0.10.2",
