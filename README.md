@@ -29,7 +29,7 @@ readImageSizePromise('path/to/foo.jpg')
 
 ## Installation
 
-[![NPM version](https://img.shields.io/npm/v/read-image-size-promise.svg?style=flat)](https:// www.npmjs.com/package/read-image-size-promise)
+[![NPM version](https://img.shields.io/npm/v/read-image-size-promise.svg?style=flat)](https://www.npmjs.com/package/read-image-size-promise)
 
 [Use npm.](https://www.npmjs.org/doc/cli/npm-install.html)
 
