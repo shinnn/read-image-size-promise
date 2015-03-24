@@ -4,7 +4,7 @@ var readImageSizePromise = require('..');
 var test = require('tape');
 
 test('readImageSizePromise()', function(t) {
-  t.plan(7);
+  t.plan(8);
 
   t.equal(readImageSizePromise.name, 'readImageSizePromise', 'should have a function name.');
 
@@ -28,7 +28,16 @@ test('readImageSizePromise()', function(t) {
   readImageSizePromise('package.json').then(t.fail, function(err) {
     t.ok(
       /TypeError.*unsupported/.test(err),
-      'should be rejected when it reads an unsupported file.'
+      'should be rejected when it reads a small file but unsupported.'
+    );
+  });
+
+  var largeFilePath = 'node_modules/bluebird/js/browser/bluebird.js';
+
+  readImageSizePromise(largeFilePath).then(t.fail, function(err) {
+    t.ok(
+      /Reached the limit before detecting image type/.test(err),
+      'should be rejected when it reads a large file but unsupported.'
     );
   });
 
